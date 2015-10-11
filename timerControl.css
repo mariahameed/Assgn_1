@@ -1,0 +1,28 @@
+	
+	
+	.timer{
+		background-color:#fff; 
+		width:100%;
+		height:5px;
+		position:fixed;
+		bottom: 43px;
+		display: block;
+		margin-left: -8px;
+		margin-right: -8px;
+	}
+
+	.timer span{
+	  display:block;
+	  background:#8F0FD0;
+	  width:100%;
+	  height:5px;
+	  animation:timer 50s linear;
+	  box-shadow:0 0 9px #000, 0 0 9px #1562A1;
+	}
+	
+	@keyframes timer{
+	0%{width:10px;}
+	100%{width:100%; 
+	display:block;}
+	}
+	

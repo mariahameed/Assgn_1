@@ -1,0 +1,71 @@
+		.alpha{
+			position:relative;
+			z-index:-1;
+			top: -510px;
+		}
+		.alpha_List
+		{
+		position:fixed;
+		z-index:-1
+		}
+		
+		#alif, #say, #daal, #zaal,#yaa
+		{
+			animation: slideDown 10s linear 2s infinite;
+			font-size:100px;
+			color:#387487;
+		}
+		
+		 #bay, #khay, #zay, #meem, #swaad
+		 {
+			animation: slideDown 8s linear 2s infinite;
+			font-size:80px;
+			color:#24C6DF;
+		 }
+		 		 
+		 #hamza, #sheen, #jeem, #tay
+		 {
+			animation: slideDown 6s linear 4s infinite;
+			font-size:70px;
+			color:#95BF0E;
+		 }
+		
+		#ttay, #rray, #ain, #laam,  #seen
+		{
+			animation: slideDown 8s linear 3.5s infinite;
+			font-size:110px;
+			color:#24DF7B;
+		}
+		
+		#hay, #ghain, #qaf, #yay
+		{
+			animation: slideDown 9s linear 0.5s infinite;
+			font-size:60px;
+			color:#810EBF;
+		}
+		
+		#pay, #zwaad, #noon, #hay, #fay
+		{
+			animation: slideDown 10s linear 1.5s infinite;
+			font-size:85px;
+			color:#FF00BF;
+		}
+		
+		#chay,  #wao, #ya,  #ray
+		{
+			animation: slideDown 7s linear 1s infinite;
+			font-size:95px;
+			color:#DF3A01;
+		}
+		
+		#toy, #zoy, #kaf, #ha
+		{
+			animation: slideDown 10s linear 2s infinite;
+			font-size:60px;
+			color:#31B404;
+		}
+		@keyframes slideDown
+		{
+			0%{top: -510px;}
+			100%{top:240px;}
+		}

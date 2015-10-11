@@ -1,0 +1,144 @@
+body{
+
+}
+li{
+list-style:none;
+}
+.alpha{
+	font-size:30px;
+	display:inline;
+}
+
+.alphaList
+{
+	background-color: rgb(255,162,0);
+	padding:5px;
+    margin-left: -8px;
+    margin-right: -8px;
+	text-align:center;
+	border: 2px solid rgb(255,201,14);
+	position: relative;
+    bottom: 100px;
+    width: 100%;
+	top:100px;
+}
+
+.alphaList a{
+	text-decoration:none;
+	color:#000
+}
+nav{
+	background-color: rgb(31,159,186);
+	padding:10px;
+	position:relative;
+	top:20px;
+	margin-left: -8px;
+    margin-right: -8px;
+	width: 100%;
+}
+
+.nav_li{
+	list-style:none;
+	display:inline;
+	padding:4px;
+}
+.nav_A
+{
+	text-decoration:none;
+	font-size:25px;
+	padding:10px;
+	color:#fff;
+}
+
+.nav_A:hover
+{
+	box-shadow: 0px 0px 8px #fff;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    height: 40px;
+    background-color: rgb(21,193,229);
+    color: white;
+    display: block;
+    margin-left: -8px;
+    margin-right: -8px;
+    width: 100%;
+	text-align: center;
+	}
+	
+.alphaDiv
+{
+    position: relative;
+    top: 50px;
+    background: #A88B23;
+    border: 2px solid #879384;
+    height: 350px;
+    width: 75%;
+    margin-left: 12.5%;
+    z-index: -1;
+    border-radius: 22px;
+    padding: 10px;
+}
+
+.displayAlpha{
+	padding-left: 10%;
+	padding-top:10%;
+	float:left;
+	width:28%;
+}
+
+.wordsDiv
+{
+	float:left;
+	padding-left: 10%;
+	padding-top:150px;
+}
+
+.alphaPic{
+	float:left;
+	margin-top:100px;
+	box-shadow: 0 0 6px #FF0000, 0 0 5px #0000FF;
+}
+
+.displayAlpha p{
+    font-size: 200px;
+    color: #FFFF00;
+	}
+	
+.alpha:hover{
+text-shadow:0px 0px 3px #000;
+color: #428019;
+}
+
+	.titlePic{
+		position:absolute; 
+		top:0; 
+		right:0px;
+	}			
+
+@media screen and (max-width: 1000px) {
+
+	nav{
+	top:160px;
+	}
+	
+	.alphaDiv
+	{
+		top:200px
+	}
+	
+	.wordsDiv{
+		padding-top:50px;
+	}
+	
+	.nav_li{
+	padding:2px;
+	}
+	.nav_A
+	{
+		padding:2px;
+	}
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css"> </link>
+	<link rel="shortcut icon" href="icon.png" />
+	<link rel="stylesheet" type="text/css" href="navigation_bar.css"> </link>
+	<link rel="stylesheet" type="text/css" href="timerControl.css"> </link>
+	<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+	<style>
+	body{
+	counter-reset:answers;
+	}
+	
+	.wordsDiv input{
+	cursor:pointer;
+	}
+	
+	.correct{
+	}
+
+	.totalScore:before{
+		content:counter(answers);
+	
+	}
+	
+	.correct:checked{
+		counter-increment:answers;
+	}
+
+	label{
+		font-size: 35px;
+		color:#D01A5D;
+	}
+	
+	.marks:after{
+	  content: counter(answers);
+	}	
+
+	.marks{
+		top:0;
+		
+	}
+
+	#finalMarks{
+		text-shadow: 0 0 10px #fff, 0 0 7px #691398;
+	}
+	
+	.questionDiv
+	{
+	    position: relative;
+		top: 50px;
+		border-bottom: 2px solid #879384;
+		height: 250px;
+		width: 75%;
+		margin-left: 12.5%;
+		padding: 10px;	
+	}
+		
+	.questionDiv>.displayAlpha p{
+			font-size:100px;
+	}
+	
+	.questionDiv>.alpha{
+		font-size:30px;
+	}
+	
+	.wordsDiv > input{
+		display:block;
+	}
+	
+	.questionDiv>.wordsDiv
+	{
+		float:left;
+		padding-left: 25%;
+		padding-top:8%;
+	}
+	.timeOver{
+		position:fixed;
+		background:#777;
+		height:20%
+		width:100%;
+	}	
+	
+	.quizover{
+	  position:fixed; 
+	  z-index:0; 
+	  left:-5000px; 
+	  top:0; 
+	  bottom:100%; 
+	  width:100%;
+	  height:100%;
+	  right:0; 
+	  background: rgba(123,34,21,0.8) url("unnamed.png") no-repeat fixed center;
+	  animation:gameover 50s linear forwards;
+	  font-size:80px;
+	  color:#463947; 
+	  font-weight:bold; 
+	  text-align:center; 
+	  text-indent:0;  
+	  line-height:500px;
+	}
+	
+	@keyframes gameover{
+	0%{left:-5000px;bottom:100%; z-index:-1}
+	90%{left:-5000px;bottom:100%;z-index:-1}
+	100%{ left:0px;z-index:11}
+	}
+
+	.overLinks{
+		position:absolute;
+		font-size: 30px;
+		font-family: 'Play', sans-serif;
+	}
+	
+	
+@media screen and (max-width: 1000px) {
+
+	nav{
+	top:160px;
+	}
+	
+	.alphaDiv
+	{
+		top:200px
+	}
+	
+	.wordsDiv{
+		padding-top:50px;
+	}
+	
+	.nav_li{
+	padding:2px;
+	}
+	.nav_A
+	{
+		padding:2px;
+	}
+}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul class="navUL">
+			
+			<li class="nav_li">	<a href="home.html" class="nav_A" style="background-color:#98B71E"> home </a>	</li>
+			<li class="nav_li">	<a href="learn_alphabets.html" class="nav_A" style="background-color:#3960B7"> Learn Alphabets </a>	</li>
+			<li class="nav_li">	<a href="listen_song.html" class="nav_A" style="background-color:#DF0174"> Alphabets Song </a>	</li>
+			<li class="nav_li">	<a href="alphabet_quiz.html" class="nav_A" style="background-color:#FF552B"> Take Quiz </a>	</li>
+			<li class="nav_li">	<a href="contact_us.html" class="nav_A" style="background-color:#FFA501"> Contact Us </a>	</li>
+		</ul>
+	</nav>
+	
+	<img src="child.png"  class="titlePic">
+
+	
+	
+
+	<div class="questionDiv" id="bay">
+		<div class="displayAlpha">
+			<p class="alpha" >&#xFEED;&#xFEAE;&#xFED6;</p> 
+		</div>
+		<div class="wordsDiv">
+			<ul>
+			  <input type="radio" id="radio1" name="question1" />			<label for="radio1">&#xFE80;</label> 	<br/>
+			  <input type="radio" id="radio2" name="question1" />			<label for="radio2">&#xFE8F;</label>	<br/>
+			  <input class="correct" type="radio" id="radio3" name="question1" /><label for="radio3">&#xFEED;</label><br/>
+			  <input type="radio" id="radio4" name="question1" />			<label for="radio4">&#xFEE1;</label>	<br/>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="questionDiv" id="bay">
+		<div class="displayAlpha">
+			<p class="alpha" >&#xFEDC;&#xFEEE;&#xFE8D;</p> 
+		</div>
+		<div class="wordsDiv">
+			<ul>
+			  <input type="radio" id="radio01" name="question2" />			<label for="radio01">&#xFBA6;</label>	<br/>
+			  <input class="correct" type="radio" id="radio02" name="question2" />			<label for="radio02">&#xFED9;</label><br/>
+			  <input type="radio" id="radio03" name="question2" />			<label for="radio03">&#xFEDD;</label>	<br/>
+			  <input type="radio" id="radio04" name="question2" />			<label for="radio04">&#xFE8D;</label>	<br/>
+			</ul>
+		</div>
+	</div>
+
+	<div class="questionDiv" id="bay">
+		<div class="displayAlpha">
+			<p class="alpha" >&#xFEE0;&#xFBFF;&#xFEE4;&#xFB56;</p> 
+		</div>
+		<div class="wordsDiv">
+			<ul>
+			  <input type="radio" id="radio5" name="question4" />			<label for="radio5">&#xFEE5;</label>		<br/>
+			  <input type="radio" id="radio6" name="question4" />			<label for="radio6">&#xFE80;</label>		<br/>
+			  <input class="correct" type="radio" id="radio04" name="question4" />			<label for="radio7">&#xFEDD;</label><br/>
+			  <input type="radio" id="radio8" name="question4" />			<label for="radio8">&#xFEB9;</label>		<br/>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="questionDiv" id="bay">
+		<div class="displayAlpha">
+			<p class="alpha" >&#xFEA7;&#xFEED;&#xFEDE;</p> 
+		</div>
+		<div class="wordsDiv">
+			<ul>
+			  <input type="radio" id="radio9" name="question3" />			<label for="radio9">&#xFE8D;</label>		<br/>
+			  <input type="radio" id="radio10" name="question3" />			<label for="radio10">&#xFE80;</label>		<br/>
+			  <input type="radio" id="radio11" name="question3" />			<label for="radio11">&#xFE99;</label>		<br/>
+			  <input class="correct" type="radio" id="radio12" name="question3" />			<label for="radio12">&#xFEA5;</label><br/>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<div class="questionDiv" id="bay">
+		<div class="displayAlpha">
+			<p class="alpha" >&#xFEE8;&#xFE8E;&#xFEDA;</p> 
+		</div>
+		<div class="wordsDiv">
+			<ul>
+			  <input class="correct" type="radio" id="radio13" name="question5" />			<label for="radio13">&#xFEE5;</label><br/>
+			  <input type="radio" id="radio14" name="question5" />			<label for="radio14">&#xFEE8;</label>		<br/>
+			  <input type="radio" id="radio15" name="question5" />			<label for="radio15">&#xFED5;</label>		<br/>
+			  <input type="radio" id="radio16" name="question5" />			<label for="radio16">&#xFB8C;</label>		<br/>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="questionDiv" id="pay">
+		<div class="displayAlpha">
+			<p class="alpha" >&#xFB59;&#xFE8E;&#xFEE8;&#xFB8C;&#xFE8D;</p> 
+		</div>
+		<div class="wordsDiv">
+			<ul>
+			  <input type="radio" id="radio17" name="question6" />			<label for="radio17">&#xFE80;</label>		<br/>
+			  <input type="radio" id="radio18" name="question6" />			<label for="radio18">&#xFE9D;</label>		<br/>
+			  <input type="radio" id="radio19" name="question6" />			<label for="radio19">&#xFE80;</label>		<br/>
+			  <input class="correct" type="radio" id="radio20" name="question6" />			<label for="radio20">&#xFB56;</label><br/>
+			</ul>
+		</div>
+	</div>
+
+	<div class="questionDiv" id="pay">
+		<div class="displayAlpha">
+			<p class="alpha" >&#xFEAB;&#xFEAD;&#xFBA6;</p> 
+		</div>
+		<div class="wordsDiv">
+			<ul>
+			  <input type="radio" id="radio21" name="question7" />			<label for="radio21">&#xFEA9;</label>		<br/>
+			  <input class="correct" type="radio" id="radio22" name="question7" />			<label for="radio22">&#xFEAB;</label>		<br/>
+			  <input type="radio" id="radio23" name="question7" />			<label for="radio23">&#xFE9D;</label>		<br/>
+			  <input type="radio" id="radio24" name="question7" />			<label for="radio24">&#xFE99;</label>		<br/>
+			</ul>
+		</div>
+	</div>
+
+	<div class="questionDiv" id="pay">
+		<div class="displayAlpha">
+			<p class="alpha" >&#xFED4;&#xFEEE;&#xFE8D;&#xFEAE;&#xFBA6;</p> 
+		</div>
+		<div class="wordsDiv">
+			<ul>
+			  <input class="correct" type="radio" id="radio25" name="question8" />			<label for="radio25">&#xFED1;</label><br/>
+			  <input type="radio" id="radio26" name="question8" />			<label for="radio26">&#xFB8A;</label>		<br/>
+			  <input type="radio" id="radio27" name="question8" />			<label for="radio27">&#xFED9;</label>		<br/>
+			  <input type="radio" id="radio28" name="question8" />			<label for="radio28">&#xFEC5;</label>		<br/>
+			</ul>
+		</div>
+	</div>
+
+	<div class="questionDiv" id="pay">
+		<div class="displayAlpha">
+			<p class="alpha" >&#xFE97;&#xFEAE;&#xFE91;&#xFEEE;&#xFEB0;</p> 
+		</div>
+		<div class="wordsDiv">
+			<ul>
+			  <input type="radio" id="radio29" name="question9" />			<label for="radio29">&#xFE8F;</label>		<br/>
+			  <input type="radio" id="radio30" name="question9" />			<label for="radio30">&#xFE80;</label>		<br/>
+			  <input class="correct" type="radio" id="radio31" name="question9" />			<label for="radio31">&#xFE95;</label><br/>
+			  <input type="radio" id="radio32" name="question9" />			<label for="radio32">&#xFB7A;</label>		<br/>
+			</ul>
+		</div>
+	</div>
+
+	<div class="questionDiv" id="pay">
+		<div class="displayAlpha">
+			<p class="alpha" >&#xFB7C;&#xFE8E;&#xFB7C;&#xFE8E</p> 
+		</div>
+		<div class="wordsDiv">
+			<ul>
+			  <input class="correct" type="radio" id="radio33" name="question10" />			<label for="radio33">&#xFB7A;</label><br/>
+			  <input type="radio" id="radio34" name="question10" />			<label for="radio34">&#xFE80;</label>		<br/>
+			  <input type="radio" id="radio35" name="question10" />			<label for="radio35">&#xFB8A;</label>		<br/>
+			  <input type="radio" id="radio36" name="question10" />			<label for="radio36">&#xFEB1;</label>		<br/>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="quizover">
+		<div class="showScore" style=" padding-left:25%">
+			<h5 class="marks" id="finalMarks" style="text-align:center; font-family: 'Poiret One', cursive;"> Marks Obtained: </h5>
+			<p class="overLinks" style="color:red;" > ******************************************** </p>
+			
+		</div>
+	</div>
+
+<!--	
+	<div style="width:100%; height:150px; padding-top:100px">
+		<h4 class="totalScore" style="text-align:center"> Score: </h4>
+	</div>
+-->
+	
+	<div class="timeOver odd" id="d1"></div>
+	<div class="timeOver even" id="d1"></div>
+	<div class="timeOver odd" id="d1"></div>
+	<div class="timeOver even" id="d1"></div>
+	<div class="timeOver odd" id="d1"></div>
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	
+	
+	<div class="timer">
+       <span></span>    
+	</div>
+
+	<footer>
+		Copyright
+	</footer>
+</body>
+</html>
